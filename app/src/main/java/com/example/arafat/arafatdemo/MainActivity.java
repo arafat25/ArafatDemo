@@ -3,12 +3,17 @@ package com.example.arafat.arafatdemo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.arafat.arafatdemo.util.utilLog;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.List;
+
+
+public class MainActivity extends BaseActivity {
 
     private ImageButton bt1;
     private ImageButton bt3;
@@ -41,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(v.getContext(), ListViewActivity.class);
-                startActivity(intent);
+                toActivity(ListViewActivity.class);
+
+//                Intent intent = new Intent(v.getContext(), ListViewActivity.class);
+//                startActivity(intent);
             }
 
 
@@ -50,7 +57,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v){
-        Toast.makeText(this,"Button 2 was clicked", Toast.LENGTH_LONG).show();
+      //  Toast.makeText(this,"Button 2 was clicked", Toast.LENGTH_LONG).show();
+        toastLong("Button 2 was clicked");
+
+        utilLog.logD("testD", "Toast");
 
     }
 }
