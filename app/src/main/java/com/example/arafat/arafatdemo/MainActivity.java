@@ -1,5 +1,6 @@
 package com.example.arafat.arafatdemo;
 
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,9 +9,14 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.arafat.arafatdemo.bean.Book;
 import com.example.arafat.arafatdemo.util.utilLog;
 
+
 import java.util.List;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class MainActivity extends BaseActivity {
@@ -18,49 +24,102 @@ public class MainActivity extends BaseActivity {
     private ImageButton bt1;
     private ImageButton bt3;
 
+    @OnClick(R.id.bt2)
+    public void button2Click() {
+        Intent intent = new Intent(this,DialogActivity.class);
+        startActivityForResult(intent,2);
+
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initialView();
         initialListener();
+        ButterKnife.bind(this);
     }
 
-    private void initialView()
-    {
+    @Override
+    protected void onStart(){
+        super.onStart();
+        toastShort("onStart");
+    }
+
+    private void initialView() {
+
         bt1 = (ImageButton) findViewById(R.id.bt1);
         bt3 = (ImageButton) findViewById(R.id.bt3);
+
     }
 
-    private void initialListener(){
+
+
+    private void initialListener()  {
+//bt1.setOnClickListener(new View.OnClickListener() {
+        //@Override
+        //public void onClick (View v) {
+
         bt1.setOnClickListener(new View.OnClickListener() {
-
             @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Button 1 was clicked", Toast.LENGTH_LONG).show();
-                                   }
-                               });
+            public void onClick(View view) {
+                //  Toast.makeText(view.getContext(), "Button2 was clicked", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(view.getContext(),ViewPagerActivity.class);
+                intent.putExtra("key", "value");
+                Bundle bundle = new Bundle();
+                bundle.putInt("Integer", 12345);
+                Book book = new Book();
+                book.setName("Android");
+                book.setAuthor("Arafat");
+                bundle.putSerializable("book", book);
+                intent.putExtras(bundle);
+                startActivityForResult(intent, 1);
 
-        bt3.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-                toActivity(ListViewActivity.class);
-
-//                Intent intent = new Intent(v.getContext(), ListViewActivity.class);
-//                startActivity(intent);
             }
-
-
+        });
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), ListViewActivity.class);
+                startActivityForResult(intent,3);
+/*
+                Intent intent = new Intent(view.getContext(), ListViewActivity.class);
+                startActivity(intent);
+*/
+            }
         });
     }
 
-    public void onClick(View v){
-      //  Toast.makeText(this,"Button 2 was clicked", Toast.LENGTH_LONG).show();
-        toastLong("Button 2 was clicked");
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode){
+            case 1:
+                String message = data.getStringExtra("message");
+                toastShort(message);
+                break;
+            case 2:
+                toastShort("Dialog");
+                break;
+            case 3:
+                toastShort("ListView");
+                break;
+            default:
+        }
+    }
 
+    public void onClick(View view) {
+        //Toast.makeText(this,"listView was clicked at position: ",Toast.LENGTH_LONG).show();
+        toastLong("Button2 was clicked");
+        //key = your class name
         utilLog.logD("testD", "Toast");
+        //Log.e("testE", "Toast");
+        //Log.i("testI", "Toast");
+        //Log.v("testI", "Toast");
+        //Log.w("testI", "Toast");
 
     }
+
+
 }
