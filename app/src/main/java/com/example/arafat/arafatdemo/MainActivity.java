@@ -80,9 +80,10 @@ import butterknife.OnClick;
                 public void onClick(View v) {
 
                     //toActivity(ListViewActivity.class);
-                    Intent intent = new Intent(v.getContext(),ActivityA.class);
+                    Intent intent = new Intent(v.getContext(), ActivityA.class);
                     startActivity(intent);
                 }
+
             });
 
         }

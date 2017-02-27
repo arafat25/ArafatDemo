@@ -17,6 +17,8 @@ public class ActivityB extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b);
+
+
         initialView();
         initialListener();
 

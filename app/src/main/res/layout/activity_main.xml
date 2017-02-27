@@ -8,36 +8,28 @@
     tools:context="com.example.arafat.arafatdemo.MainActivity">
 
     <RelativeLayout
-        android:id="@+id/title_bar"
-        android:layout_width = "match_parent"
-        android:layout_height = "58dp"
-        android:background = "@android:color/holo_blue_bright">
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@android:color/holo_blue_bright">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/app_name"
-            android:textSize = "30sp"
+            android:textSize="30sp"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:textColor= "@color/White"/>
-
-        <ImageButton
-            android:layout_width="54dp"
-            android:layout_height="54dp"
-            android:background="@android:color/transparent"
-            android:layout_marginLeft="12dp"
-            android:src="@drawable/menu"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"/>
+            android:textColor="@color/White"/>
 
         <ImageButton
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@drawable/bt_style_xml"
+            android:background="@android:color/transparent"
+            android:src="@drawable/bt_style"
+            android:layout_marginLeft="12dp"
             android:layout_centerVertical="true"
-            android:layout_marginRight="12dp"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentLeft="true"/>
 
         <ImageButton
             android:id="@+id/bt4"
@@ -50,51 +42,46 @@
 
     </RelativeLayout>
 
-
-
-
     <LinearLayout
-        android:id="@+id/tool_bar"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
         android:background="@android:color/holo_green_light">
 
         <ImageButton
             android:id="@+id/bt1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight = "1"
             android:layout_margin="6dp"
-            android:background="@color/White"/>
+            android:layout_weight="1"
+            android:background="@android:color/white"/>
 
         <ImageButton
             android:id="@+id/bt2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight = "1"
             android:layout_margin="6dp"
-            android:background="@color/White"
-            />
+            android:layout_weight="1"
+            android:background="@android:color/white"/>
 
-
-        <!-- each time onClick is used, java searches all documents for it -->
         <ImageButton
             android:id="@+id/bt3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight = "1"
             android:layout_margin="6dp"
-            android:background="@color/White"/>
-
+            android:layout_weight="1"
+            android:background="@android:color/white"/>
     </LinearLayout>
+
     <ListView
-        android:layout_below="@id/title_bar"
-        android:layout_above="@id/tool_bar"
+        android:layout_above="@id/toolbar"
+        android:layout_below="@id/titlebar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/White"/>
+        android:background="@color/White">
 
+    </ListView>
 
 </RelativeLayout>
-
