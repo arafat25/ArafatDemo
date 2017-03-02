@@ -75,13 +75,35 @@
             android:background="@android:color/white"/>
     </LinearLayout>
 
-    <ListView
+    <FrameLayout
         android:layout_above="@id/toolbar"
         android:layout_below="@id/titlebar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/White">
 
-    </ListView>
+
+        <Button
+            android:id="@+id/main_timer_bt"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Timer"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/main_anim_bt"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Animation"
+            android:layout_marginLeft="100dp"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            />
+
+    </FrameLayout>
+
+
 
 </RelativeLayout>

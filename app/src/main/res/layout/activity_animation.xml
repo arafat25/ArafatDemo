@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_animation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.arafat.arafatdemo.AnimationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true">
+        <Button
+            android:id="@+id/anim_alpha"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+
+            android:text="Alpha" />
+        <Button
+            android:id="@+id/anim_scale"
+            android:text="Scale"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/anim_rotate"
+            android:text="Rotate"
+            android:textSize="12dp"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/anim_trans"
+            android:text="Trans"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/anim_set"
+            android:text="Set"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/anim_tv"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:text="Animation"
+        android:textSize="50dp"
+
+
+        android:gravity="center"
+
+
+        android:background="@android:color/holo_orange_light"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+
+         />
+
+</RelativeLayout>

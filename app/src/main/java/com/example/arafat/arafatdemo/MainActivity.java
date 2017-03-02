@@ -14,6 +14,7 @@ import com.example.arafat.arafatdemo.util.utilLog;
 
 
 import java.util.List;
+import java.util.Timer;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -23,6 +24,22 @@ import butterknife.OnClick;
         private ImageButton bt1;
         private ImageButton bt3;
         private ImageButton bt4;
+
+
+        @OnClick(R.id.main_anim_bt)
+        public void toAnimation(){
+            toActivity(AnimationActivity.class);
+        }
+
+        @OnClick(R.id.bt4)
+        public void toActivityA(){
+            toActivity(ActivityA.class);
+        }
+
+        @OnClick(R.id.main_timer_bt)
+        public void toTimer(){
+            toActivity((TimerActivity.class));
+        }
 
         @OnClick(R.id.bt2)
         public void button2Click(){
