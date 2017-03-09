@@ -22,7 +22,7 @@ public class Quiz4 extends Dialog{
     private int checkedID;
 
 
-    @BindView(R.id.quiz)
+    @BindView(R.id.quizrdg)
     RadioGroup radioGroup;
 
     @OnClick(R.id.Cancel)
@@ -74,11 +74,9 @@ public class Quiz4 extends Dialog{
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-
+                //toastShort("You checked the radio button"+checkedId);
                 checkedID = checkedId;
             }
         });
     }
 }
-
-

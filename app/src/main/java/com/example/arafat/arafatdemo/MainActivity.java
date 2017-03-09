@@ -35,6 +35,7 @@ import butterknife.OnClick;
 
 
 
+
         @OnClick(R.id.main_anim_bt)
         public void toAnimation(){
             toActivity(AnimationActivity.class);
@@ -45,7 +46,7 @@ import butterknife.OnClick;
             toActivity(AnimatorActivity.class);
         }
 
-        @OnClick(R.id.quiz)
+        @OnClick(R.id.quiz_bt)
         public void toQuiz4(){
             toActivity(DialogActivity.class);
         }
