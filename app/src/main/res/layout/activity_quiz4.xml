@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quiz4"
+        android:gravity="center"
+        android:layout_gravity="center"
+
+        android:textSize="25sp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/White"/>
+
+
+    <RadioGroup
+        android:id="@+id/quiz"
+        android:layout_width="match_parent"
+
+        android:layout_height="150dp">
+
+
+        <RadioButton
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:gravity="left|center_vertical"
+            android:text="Button 1"/>
+        <RadioButton
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left|center_vertical"
+            android:text="Button 2"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/OK"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:layout_weight="1"
+            android:text="OK"
+            android:textSize="36sp"
+            />
+        <Button
+            android:id="@+id/Cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textSize="36sp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

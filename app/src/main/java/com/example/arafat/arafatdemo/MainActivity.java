@@ -45,6 +45,11 @@ import butterknife.OnClick;
             toActivity(AnimatorActivity.class);
         }
 
+        @OnClick(R.id.quiz)
+        public void toQuiz4(){
+            toActivity(DialogActivity.class);
+        }
+
         @OnClick(R.id.bt4)
         public void toActivityA(){
             toActivity(ActivityA.class);
@@ -199,7 +204,7 @@ import butterknife.OnClick;
                 toastShort( "onFling");
                 return true;
             }
-            
+
             public boolean onDoubleTap(MotionEvent e) {
        //         utilLog.logD("MyGesture", "onDoubleTap");
                 toastShort( "onDoubleTap");
