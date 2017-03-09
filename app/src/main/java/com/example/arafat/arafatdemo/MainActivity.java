@@ -2,9 +2,7 @@ package com.example.arafat.arafatdemo;
 
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
@@ -14,18 +12,18 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.arafat.arafatdemo.bean.Book;
+import com.example.arafat.arafatdemo.dialog.Quiz4;
 import com.example.arafat.arafatdemo.util.utilLog;
 
-
-import java.util.List;
-import java.util.Timer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static com.example.arafat.arafatdemo.R.style.dialog;
 
-    public class MainActivity extends BaseActivity implements View.OnTouchListener{
+
+public class MainActivity extends BaseActivity implements View.OnTouchListener{
         private ImageButton bt1;
         private ImageButton bt3;
         private ImageButton bt4;
@@ -46,11 +44,6 @@ import butterknife.OnClick;
             toActivity(AnimatorActivity.class);
         }
 
-        @OnClick(R.id.quiz_bt)
-        public void toQuiz4(){
-            toActivity(DialogActivity.class);
-        }
-
         @OnClick(R.id.bt4)
         public void toActivityA(){
             toActivity(ActivityA.class);
@@ -68,6 +61,19 @@ import butterknife.OnClick;
             //toActivity(DialogActivity.class);
         }
 
+        @OnClick(R.id.quiz_bt)
+        public void toQuiz(){
+            final Quiz4 dialog= new Quiz4(this, new Quiz4.ICustomDialogEventListener(){
+                @Override
+                public void onClickListener() {
+                    Intent intent = new Intent();
+                    intent.putExtra("message", "Dialog");
+                    setResult(RESULT_OK, intent);
+                    finish();
+                }
+            });
+            dialog.show();
+        }
 
 
         @Override
