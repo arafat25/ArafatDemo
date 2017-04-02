@@ -3,15 +3,14 @@ package com.example.arafat.arafatdemo.dialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
-import android.os.Bundle;
 import android.widget.RadioGroup;
 
 import com.example.arafat.arafatdemo.DialogActivity;
 import com.example.arafat.arafatdemo.ListViewActivity;
 import com.example.arafat.arafatdemo.R;
-import com.example.arafat.arafatdemo.ViewPagerActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,8 +29,8 @@ import butterknife.OnClick;
 
         @OnClick(R.id.Cancel)
         public void onCancel(){
-            Intent intent = new Intent(getContext(), ViewPagerActivity.class );
-            getContext().startActivity(intent);
+          //  Intent intent = new Intent(getContext(), ViewPagerActivity.class );
+          //  getContext().startActivity(intent);
             dismiss();
         }
 
@@ -42,7 +41,6 @@ import butterknife.OnClick;
                     listener.onClickListener();
                     Intent intent = new Intent(getContext(), DialogActivity.class );
                     getContext().startActivity(intent);
-
                     break;
                 case R.id.Button2:
                     Intent intent2 = new Intent(getContext(), ListViewActivity.class );

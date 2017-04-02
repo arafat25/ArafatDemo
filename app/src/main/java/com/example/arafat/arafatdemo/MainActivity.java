@@ -96,7 +96,7 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
             @Override
             public void onClickListener() {
                 Intent intent = new Intent(MainActivity.this, DialogActivity.class);
-                startActivity(intent);
+                   startActivity(intent);
             }
 
             @Override
@@ -107,7 +107,7 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
 
             @OnClick(R.id.viewPagerActivityBt)
             public void viewPagerActivity(){
-                Intent intent = new Intent(this,ViewPagerActivity.class);
+                Intent intent = new Intent(MainActivity.this,ViewPagerActivity.class);
                 intent.putExtra("key","value");
                 Bundle bundle = new Bundle();
                 bundle.putInt("Integer", 12345);
@@ -258,6 +258,8 @@ public class MainActivity extends BaseActivity implements View.OnTouchListener{
         });
 
     }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
