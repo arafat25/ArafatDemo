@@ -23,6 +23,7 @@
             android:textColor="@color/White"/>
 
         <ImageButton
+            android:id="@+id/move"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@android:color/transparent"
@@ -75,6 +76,12 @@
             android:background="@android:color/white"/>
     </LinearLayout>
 
+    <ListView
+        android:layout_above="@id/toolbar"
+        android:layout_below="@id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"></ListView>
     <FrameLayout
         android:id="@+id/main_fl"
         android:layout_width="match_parent"
@@ -84,7 +91,15 @@
         android:layout_alignParentStart="true"
         android:layout_above="@+id/toolbar">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
         <Button
             android:id="@+id/main_timer_bt"
             android:layout_width="100dp"
@@ -113,7 +128,11 @@
             android:textSize="15sp"
             android:textAllCaps="false"
             />
-
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/LL1">
         <Button
             android:id="@+id/quiz_bt"
             android:layout_width="100dp"
@@ -123,10 +142,111 @@
             android:textSize="15sp"
             android:textAllCaps="false"
             android:layout_marginTop="75dp"
-
           />
+        </LinearLayout>
+        </LinearLayout>
 
     </FrameLayout>
 
+    <LinearLayout
+        android:id="@+id/listOfActivity"
+        android:layout_width="325dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlebar"
+        android:background="@android:color/holo_green_dark"
+        android:layout_marginLeft="-325dp"
+        android:paddingLeft="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/viewPagerActivityBt"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="ViewPager Activity"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/dialogActivityBt"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Dialog Activity"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/listViewActivityBt"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="ListView Activity"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/animationActivity"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Animation"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/animatorActivity"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Animator"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/timerActivity"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Timer Activity"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/aActivityBt"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="A Activity"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/bActivityBt"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="B Activity"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/cActivityBt"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="C Activity"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/dActivityBt"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="D Activity"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
 </RelativeLayout>
+

@@ -67,6 +67,10 @@ import butterknife.OnClick;
 
         public interface ICustomDialogEventListener{
             public void onClickListener();
+
+            void onClick2Listener();
+
+            void onClickCancel();
         }
 
         protected void onCreate(Bundle savedInstanceState) {
