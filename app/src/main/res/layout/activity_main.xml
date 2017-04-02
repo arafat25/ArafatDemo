@@ -8,10 +8,11 @@
     tools:context="com.example.arafat.arafatdemo.MainActivity">
 
     <RelativeLayout
-        android:id="@+id/titlebar"
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:background="@android:color/holo_blue_bright">
+        android:background="@android:color/holo_blue_bright"
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -20,163 +21,154 @@
             android:textSize="30sp"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:textColor="@color/White"/>
+            android:textColor="@color/White"
+            />
 
         <ImageButton
-            android:id="@+id/move"
+            android:id="@+id/leftbutton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/bt_style"
-            android:layout_marginLeft="12dp"
+            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"/>
+            android:layout_marginLeft="12dp"
+            android:background="@android:color/transparent"
 
+            android:src="@drawable/bt_style" />
         <ImageButton
-            android:id="@+id/bt4"
+            android:id="@+id/launch_mode"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:background="@drawable/bt_style_xml"
             android:layout_marginRight="12dp"
             android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true"
+
+            />
 
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/toolbar"
+        android:id="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="@android:color/holo_green_light">
+        android:background="@android:color/holo_green_light"
+        >
 
         <ImageButton
             android:id="@+id/bt1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="6dp"
             android:layout_weight="1"
-            android:background="@android:color/white"/>
-
+            android:layout_margin="6dp"
+            android:background="@color/White"
+            />
         <ImageButton
             android:id="@+id/bt2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="6dp"
             android:layout_weight="1"
-            android:background="@android:color/white"/>
-
+            android:layout_margin="6dp"
+            android:background="@color/White"
+            />
         <ImageButton
             android:id="@+id/bt3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="6dp"
             android:layout_weight="1"
-            android:background="@android:color/white"/>
+            android:layout_margin="6dp"
+            android:background="@color/White"
+            />
+
     </LinearLayout>
 
-    <ListView
-        android:layout_above="@id/toolbar"
-        android:layout_below="@id/titlebar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/White"></ListView>
     <FrameLayout
         android:id="@+id/main_fl"
+        android:layout_below="@id/title_bar"
+        android:layout_above="@id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/White"
-        android:layout_below="@+id/titlebar"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/toolbar">
+        android:background="@color/White">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-        <LinearLayout
-            android:id="@+id/LL1"
-            android:layout_width="match_parent"
-            android:layout_height="100dp">
         <Button
             android:id="@+id/main_timer_bt"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:text="Timer"
-            android:textSize="20sp"
             android:textAllCaps="false"
+            android:textSize="15sp"
             />
 
         <Button
-            android:id="@+id/main_anim_bt"
+            android:id="@+id/main_timer_anim"
+            android:layout_marginLeft="100dp"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:text="Animation"
-            android:layout_marginLeft="100dp"
-            android:textSize="15sp"
             android:textAllCaps="false"
+            android:textSize="15sp"
             />
 
         <Button
-            android:id="@+id/animator_bt"
+            android:id="@+id/main_anim"
+            android:layout_marginLeft="200dp"
             android:layout_width="100dp"
             android:layout_height="60dp"
             android:text="Animator"
-            android:layout_marginLeft="200dp"
-            android:textSize="15sp"
             android:textAllCaps="false"
+            android:textSize="15sp"
             />
-</LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@+id/LL1">
         <Button
-            android:id="@+id/quiz_bt"
+            android:id="@+id/quiz4"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="65dp"
             android:layout_width="100dp"
             android:layout_height="60dp"
-            android:text="Quiz4"
-
-            android:textSize="15sp"
+            android:text="Quiz"
             android:textAllCaps="false"
-            android:layout_marginTop="75dp"
-          />
-        </LinearLayout>
-        </LinearLayout>
+            android:textSize="15sp"
+            />
 
     </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/listOfActivity"
-        android:layout_width="325dp"
+        android:id="@+id/hw4"
+        android:layout_width="250dp"
         android:layout_height="match_parent"
-        android:layout_below="@+id/titlebar"
-        android:background="@android:color/holo_green_dark"
+        android:background="@android:color/black"
         android:layout_marginLeft="-325dp"
+        android:layout_below="@+id/title_bar"
         android:paddingLeft="10dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/viewPagerActivityBt"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:text="ViewPager Activity"
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:text="MainActivity"
+            android:background="@color/Black"
+            android:textColor="@color/White"
             android:textAllCaps="false"
             android:textSize="20sp"
             />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
 
-        <Button
-            android:id="@+id/dialogActivityBt"
-            android:layout_width="150dp"
-            android:layout_height="40dp"
-            android:text="Dialog Activity"
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:text="ViewPagerActivity"
+            android:background="@color/Black"
+            android:textColor="@color/White"
             android:textAllCaps="false"
             android:textSize="20sp"
             />
-
-        <Button
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+        <TextView
             android:id="@+id/listViewActivityBt"
             android:layout_width="150dp"
             android:layout_height="40dp"
